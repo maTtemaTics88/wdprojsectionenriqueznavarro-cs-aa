@@ -1,0 +1,400 @@
+/*Fonts*/
+@font-face {
+  font-family: vonique;
+  src: url(https://cdn.glitch.global/840246b7-0dc1-4e65-87fe-7a82faedb142/JetBrainsMono-Regular.ttf?v=1738731352500);
+}
+
+/*Transitions*/
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes enter-text {
+  0% {
+    opacity: 0;
+    letter-spacing: 10px;
+  }
+  100% {
+    opacity: 1;
+    letter-spacing: 3px;
+    z-index: 100;
+  }
+}
+
+/* Adjust position of object for translation */
+@keyframes translationUp {
+  0% {
+    transform: translate(0px, 40px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes translationDown {
+  0% {
+    transform: translate(0px, -40px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+/*Transitions*/
+@keyframes bg1 {
+  0% {
+    transform: rotate(0deg) translate(0px, 0px);
+  }
+  50% {
+    transform: rotate(135deg) translate(0px, 0px);
+  }
+  100% {
+    transform: rotate(135deg) translate(110px, 110px);
+  }
+}
+
+@keyframes bg2 {
+  0% {
+    transform: rotate(0deg) translate(0px, 0px);
+  }
+  50% {
+    transform: rotate(135deg) translate(0px, 0px);
+  }
+  100% {
+    transform: rotate(135deg) translate(0px, 0px);
+  }
+}
+
+@keyframes bg3 {
+  0% {
+    transform: rotate(0deg) translate(0px, 0px);
+  }
+  50% {
+    transform: rotate(135deg) translate(0px, 0px);
+  }
+  100% {
+    transform: rotate(135deg) translate(-110px, -110px);
+  }
+}
+
+@keyframes bg4 {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(135deg) scale(1);
+  }
+  100% {
+    transform: rotate(135deg) scale(0.8);
+  }
+}
+
+@keyframes bg5 {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(135deg) scale(1);
+  }
+  100% {
+    transform: rotate(135deg) scale(1.2);
+  }
+}
+
+/*Colors*/
+:root {
+  --text-col: #00ffe8;
+  --text-highlight-col: #4bff36;
+  --prim-col: #313131;
+  --seco-col: #5c5c5c;
+  --prim-lig-col: #5e17eb;
+  --seco-lig-col: #707793;
+}
+ 
+/*Title Area*/
+body {
+  padding-left: 0px;
+  margin: 0;
+  background-color: var(--prim-col);
+  color: var(--text-col);
+  font-family: vonique, sans-serif;
+}
+
+.bg1, .bg2, .bg3, .bg4, .bg5 {
+  background-image: url("https://cdn.glitch.global/840246b7-0dc1-4e65-87fe-7a82faedb142/gold.png?v=1738730932521");
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  background-size: 200px;
+  top: 55%;
+  left: 50%;
+  margin-left: -100px;
+  translate: 0px -150px;
+}
+
+.bg1 {
+  animation: bg1 3s linear 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards ;
+}
+
+.bg2 {
+  animation: bg2 3s linear 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both ;
+}
+
+.bg3 {
+  animation: bg3 3s linear 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards ;
+}
+
+.bg4 {
+  animation: bg4 3s linear 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards ;
+}
+
+.bg5 {
+  animation: bg5 3s linear 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards ;
+}
+
+.front-page {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  border: 3px solid var(--seco-col);
+}
+
+.header-home {
+  font-family: vonique, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 40vh;
+  letter-spacing: 3px;
+  animation: enter-text 5s;
+}
+
+.header-home > .title {
+  font-size: 60px;
+  display: inline-block;
+  animation: translationDown 5s;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.header-home > .subtitle {
+  font-size: 20px;
+  display: inline-block;
+  animation: translationUp 5s;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/*Text and Content*/
+h1 {
+  padding-top: 0vh;
+}
+
+/*Button Stuffs*/
+.btn-group {
+  background-color: var(--prim-col);
+  padding: 5px;
+  border-radius: 20px;
+  text-align: center;
+  margin: auto;
+  width: 260px;
+}
+
+button {
+  text-align: center;
+  width: 80px;
+  border-radius: 10px;
+  background-color: var(--seco-col);
+  border: none;
+  color: var(--text-col);
+}
+
+/*Slider Stuffs*/
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 10px;  
+  background: var(--prim-col);
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%; 
+  background: var(--seco-col);
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: var(--seco-col);
+  cursor: pointer;
+}
+
+/*Graphs*/
+.graph {
+  width: 510px;
+  height: 510px;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  animation: enter-text 1s, translationDown 1s;
+}
+
+.canvas {
+  position: absolute;
+  top: 200px;
+  left: 200px;
+  transform: rotate(0deg);
+  scale: 1;
+}
+
+.grid {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border: 3px solid var(--seco-col);
+}
+
+/*Nav Bar*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--prim-col);
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: vonique, sans-serif;
+  color: var(--text-col);
+}
+
+li a:hover {
+  background-color: var(--seco-col);
+}
+
+.active {
+  background-color: var(--prim-col);
+}
+
+.content {
+  margin: 10vw;
+  padding: 10px;
+  width: calc(100vw - 20vw - 20px);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+#defaultCanvas0 {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  z-index: -1;
+  margin: 0px;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Adjust text for 'About Us' page */
+#lewis {
+  max-width: 40vw;
+  float: left;
+  padding: 10px;
+}
+
+#matt {
+  max-width: 40vw;
+  float: right;
+  padding: 10px;
+}
+
+/* Translation formula */
+#translation_formula {
+  max-width: 80vw;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+}
+
+iframe {
+  max-width: 80vw;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+}
+
+.transition {
+  background-image: url("https://cdn.glitch.global/840246b7-0dc1-4e65-87fe-7a82faedb142/Untitled%20design%20(4).png?v=1738253429316");
+  width: 100px;
+  height: 100px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  margin-left: -50px;
+  animation: spin 5s linear infinite;
+}
+
+.smoothenter {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .18em; /* Adjust as needed */
+  animation: typing 3.5s 1;
+  animation-fill-mode: forwards ;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 380px }
+}
+
+.source {
+  text-indent: -36px;
+  padding-left: 36px;
+}
