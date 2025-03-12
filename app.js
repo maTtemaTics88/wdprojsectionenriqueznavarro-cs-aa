@@ -4,6 +4,10 @@ const port = 3000;
 
 // Set the view engine to Handlebars
 app.set('view engine', 'hbs');
+app.set('views', './views');
+
+// Register partials
+hbs.registerPartials('./views/partials')
 
 // Serve static files from the "public" folder
 app.use(express.static('public'));
