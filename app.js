@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
 });
 
 // Handle form submission
-app.post('/submit', (req, res) => {
+app.post('/submit', (req, res) => { 
   const { name } = req.body;
   res.render('result', { title: 'Form Submission', name });
 });

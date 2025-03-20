@@ -289,8 +289,7 @@ ul {
   padding: 0;
   overflow: hidden;
   background-color: var(--prim-col);
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 999;
 }
