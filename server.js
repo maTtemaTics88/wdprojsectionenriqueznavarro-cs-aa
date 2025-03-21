@@ -5,7 +5,7 @@ const app = express();
 const port = 3000;
 
 // JSON data
-const data = JSON.parse(FileSystem.readFileSync('data.json'));
+const primary = JSON.parse(FileSystem.readFileSync('./data/primary.json'));
 
 // Set the view engine to Handlebars
 app.set('view engine', 'hbs');
@@ -22,16 +22,16 @@ app.use(express.urlencoded({ extended: true }));
 
 // Define a route
 app.get('/', (req, res) => {
-  res.render('index', data);
+  res.render('index', primary);
 });
 
 // Handle form submission
 app.get('/about', (req, res) => { 
-  res.render('about', data);
+  res.render('about', primary);
 });
 
 app.get('/translation', (req, res) => { 
-  res.render('translation', data);
+  res.render('translation', primary);
 });
 
 app.listen(port, () => {
