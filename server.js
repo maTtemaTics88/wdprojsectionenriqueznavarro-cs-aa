@@ -1,7 +1,11 @@
 const express = require('express');
+const FileSystem = require('fs');
 const hbs = require('hbs');
 const app = express();
 const port = 3000;
+
+// JSON data
+const data = JSON.parse(FileSystem.readFileSync('data.json'));
 
 // Set the view engine to Handlebars
 app.set('view engine', 'hbs');
@@ -18,13 +22,16 @@ app.use(express.urlencoded({ extended: true }));
 
 // Define a route
 app.get('/', (req, res) => {
-  res.render('index', { title: 'Hello, World!', message: 'Welcome to Node.js with Handlebars!' });
+  res.render('index', data);
 });
 
 // Handle form submission
-app.post('/submit', (req, res) => { 
-  const { name } = req.body;
-  res.render('result', { title: 'Form Submission', name });
+app.get('/about', (req, res) => { 
+  res.render('about', data);
+});
+
+app.get('/translation', (req, res) => { 
+  res.render('translation', data);
 });
 
 app.listen(port, () => {

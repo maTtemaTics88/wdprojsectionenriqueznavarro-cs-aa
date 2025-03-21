@@ -1,0 +1,21 @@
+{
+    "title": "TO ALTER THE WORLD!",
+
+    "authors": [
+        {"name": "Lewis Enriquez", "email": "b2028laienriquez"},
+        {"name": "Matt Enriquez", "email": "b2028mgfnavarro"}
+    ],
+
+    "sources": [
+        {
+            "name": "3blue2brown",
+            "url": "https://www.youtube.com/watch?v=fNk_zzaMoSs",
+            "apa": "3Blue1Brown. (2016b, August 6). Vectors | Chapter 1, Essence of linear algebra [Video]. YouTube."
+        },
+        {
+            "name": "cuemath",
+            "url": "https://www.cuemath.com/geometry/transformations/",
+            "apa": "Transformations - types, rules, formulas, graphs, examples. (n.d.). Cuemath."
+        }
+    ]
+}

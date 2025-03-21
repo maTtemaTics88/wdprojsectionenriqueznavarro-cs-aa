@@ -289,7 +289,7 @@ ul {
   padding: 0;
   overflow: hidden;
   background-color: var(--prim-col);
-  position: fixed;
+  position: sticky;
   top: 0;
   z-index: 999;
 }

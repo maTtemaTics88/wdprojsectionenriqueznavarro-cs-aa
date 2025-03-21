@@ -30,7 +30,7 @@ function setup() {
   // turn off the createGraphics layers stroke
   shaderTexture.noStroke();
   
-  resizeCanvas(windowWidth, windowHeight);
+  resizeCanvas(windowWidth, windowHeight + 20);
 }
 ;
 function draw() {
@@ -53,5 +53,5 @@ function draw() {
 }
 
 function windowResized(){
-  resizeCanvas(windowWidth, windowHeight);
+  resizeCanvas(windowWidth, windowHeight + 20);
 }

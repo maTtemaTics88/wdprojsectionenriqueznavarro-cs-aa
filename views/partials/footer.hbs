@@ -3,12 +3,9 @@
         SOURCES:
     </h1>
 
-    <p class = "source">
-        3Blue1Brown. (2016b, August 6). Vectors | Chapter 1, Essence of linear algebra [Video]. YouTube. https://www.youtube.com/watch?v=fNk_zzaMoSs
-    </p>
-
-    <p class = "source">
-        Transformations - types, rules, formulas, graphs, examples. (n.d.). Cuemath. https://www.cuemath.com/geometry/transformations/
-    </p>
-
+    {{#each sources}}
+        <p class = "source">
+            {{this.apa}}<a href = "{{this.url}}">{{this.url}}</a>
+        </p>
+    {{/each}}
 </div>
