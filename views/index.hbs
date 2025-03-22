@@ -1,96 +1,96 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>{{title}}</title>
+    <head>
+        <title>{{title}}</title>
 
-    <!-- Meta Tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="keywords" content="math, transformations, highschool, learn, tutorial"/>
-    <meta name="description" content="The homepage for the website 'To Alter The World' made by Matt and Lewis." />
-    <meta name="authors" content="Matt Gerard Fadul Navarro, Lewis Angelo Enriquez" />
-    <meta name="revised" content="December 23, 2024" />
-    
-    <!-- Favicon -->
-    <link
-      rel="icon"
-      href="https://cdn.glitch.global/840246b7-0dc1-4e65-87fe-7a82faedb142/CSQ2_AA_Logo.ico?v=1734689609154"
-    />
-    <!-- CSS -->
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    
-    
-    <!-- Links to the code and package needed to render the shader used in the background -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js"></script> 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/addons/p5.dom.js"></script>
-    <script src="sketch.js"></script> 
-  </head>
-  <body>
-    <!-- 3D rendering -->
-    <script src="https://unpkg.com/three@0.132"></script>
+        <!-- Meta Tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="keywords" content="math, transformations, highschool, learn, tutorial"/>
+        <meta name="description" content="The homepage for the website 'To Alter The World' made by Matt and Lewis." />
+        <meta name="authors" content="Matt Gerard Fadul Navarro, Lewis Angelo Enriquez" />
+        <meta name="revised" content="December 23, 2024" />
+        
+        <!-- Favicon -->
+        <link
+            rel="icon"
+            href="https://cdn.glitch.global/840246b7-0dc1-4e65-87fe-7a82faedb142/CSQ2_AA_Logo.ico?v=1734689609154"
+        />
+        <!-- CSS -->
+        <link href="style/style.css" rel="stylesheet" type="text/css" />
+        <link href="style/style-index.css" rel="stylesheet" type="text/css" />
+        
+        <!-- Links to the code and package needed to render the shader used in the background -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js"></script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/addons/p5.dom.js"></script>
+        <script src="sketch.js"></script> 
+    </head>
+    <body>
+        <!-- 3D rendering -->
+        <script src="https://unpkg.com/three@0.132"></script>
 		<script src="https://unpkg.com/three@0.132/examples/js/loaders/GLTFLoader.js"></script>
-    <script src="three_renderer.js"></script>
-    
-    
-    <!-- When the website is opened, this div will take up the whole screen -->
-    <div class = "front-page">
-      <header class = "header-home">
-        <div class = "bg1"></div>
-        <div class = "bg2"></div>
-        <div class = "bg3"></div>
-        <div class = "bg4"></div>
-        <div class = "bg5"></div>
-        <div class = "title">
-          {{title}}
+        <script src="three_renderer.js"></script>
+        
+        
+        <!-- When the website is opened, this div will take up the whole screen -->
+        <div class = "front-page">
+            <header class = "header-home">
+                <div class = "bg1"></div>
+                <div class = "bg2"></div>
+                <div class = "bg3"></div>
+                <div class = "bg4"></div>
+                <div class = "bg5"></div>
+                <div class = "title">
+                    {{title}}
+                </div>
+                <br>
+                <div class = "subtitle">
+                    A venture into mathematical transformations.
+                </div>
+            </header>
         </div>
-        <br>
-        <div class = "subtitle">
-          A venture into mathematical transformations.
+        
+        
+        <!-- Navigation Bar -->
+        <ul>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/translation">Translation</a></li>
+        </ul>
+        
+        <div class = "content">
+            <div class = "transition"></div>
+            
+            <h1 class = "title, smoothenter">
+                TRANSFORMATIONS
+            </h1>
+
+            <p>
+                Transformational geometry involves altering geometric shapes and figures to create new ones. The pre image, or the figure that will be transformed geometrically, is the input of a geometric transformation. The figure that results from the subsequent geometric transformation is then the image. Translation, rotation, scaling, and mirror reflection of a pre-image are examples of geometric transformations. Geometric transformations are essential, as they can be significantly applied in real life. This includes the simple utilization of rotating, translating, or dilating an object.
+            </p>
+            
+            <p>
+                Below you can see some of the different transformations that you will be learning! Press each of the buttons and see how they effect the pentagon!!!
+            </p>
+            
+            <div class = "transition"></div>
+            
+            <!-- Buttons to perform transformations -->
+            <div class="btn-group">
+                <button onclick = "tr(100, 100)">Translate</button>
+                <button onclick = "ro(90)">Rotate</button>
+                <button onclick = "di(2)">Dilate</button>
+            </div>
+            <br>
+
+            <!-- The div of canvases used in creating the    -->
+            <div class = "graph">
+                <canvas width="100" height="100" class="canvas" id="canvas_home"></canvas>
+                <canvas width="500" height="500" class="grid" id="grid_home"></canvas>
+            </div>
         </div>
-      </header>
-    </div>
-    
-    
-    <!-- Navigation Bar -->
-    <ul>
-      <li><a href="/about">About Us</a></li>
-      <li><a href="/">Home</a></li>
-      <li><a href="/translation">Translation</a></li>
-    </ul>
-    
-    <div class = "content">
-      <div class = "transition"></div>
-      
-      <h1 class = "title, smoothenter">
-        TRANSFORMATIONS
-      </h1>
-
-      <p>
-        Transformational geometry involves altering geometric shapes and figures to create new ones. The pre image, or the figure that will be transformed geometrically, is the input of a geometric transformation. The figure that results from the subsequent geometric transformation is then the image. Translation, rotation, scaling, and mirror reflection of a pre-image are examples of geometric transformations. Geometric transformations are essential, as they can be significantly applied in real life. This includes the simple utilization of rotating, translating, or dilating an object.
-      </p>
-      
-      <p>
-        Below you can see some of the different transformations that you will be learning! Press each of the buttons and see how they effect the pentagon!!!
-      </p>
-      
-      <div class = "transition"></div>
-      
-      <!-- Buttons to perform transformations -->
-      <div class="btn-group">
-        <button onclick = "tr(100, 100)">Translate</button>
-        <button onclick = "ro(90)">Rotate</button>
-        <button onclick = "di(2)">Dilate</button>
-      </div>
-      <br>
-
-      <!-- The div of canvases used in creating the  -->
-      <div class = "graph">
-        <canvas width="100" height="100" class="canvas" id="canvas_home"></canvas>
-        <canvas width="500" height="500" class="grid" id="grid_home"></canvas>
-      </div>
-    </div>
-    
-    {{> footer}}
-    <script src="script.js"></script>
-  </body>
+        
+        {{> footer}}
+        <script src="script.js"></script>
+    </body>
 </html>

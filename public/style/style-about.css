@@ -1,0 +1,12 @@
+/* Adjust text for 'About Us' page */
+#lewis {
+    max-width: 40vw;
+    float: left;
+    padding: 10px;
+}
+
+#matt {
+    max-width: 40vw;
+    float: right;
+    padding: 10px;
+}

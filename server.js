@@ -22,18 +22,18 @@ app.use(express.urlencoded({ extended: true }));
 
 // Define a route
 app.get('/', (req, res) => {
-  res.render('index', primary);
+    res.render('index', primary);
 });
 
 // Handle form submission
 app.get('/about', (req, res) => { 
-  res.render('about', primary);
+    res.render('about', primary);
 });
 
 app.get('/translation', (req, res) => { 
-  res.render('translation', primary);
+    res.render('translation', primary);
 });
 
 app.listen(port, () => {
-  console.log(`Server is running at http://localhost:${port}`);
+    console.log(`Server is running at http://localhost:${port}`);
 });

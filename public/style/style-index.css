@@ -1,0 +1,169 @@
+/*Transitions*/
+@keyframes enter-text {
+    0% {
+        opacity: 0;
+        letter-spacing: 10px;
+    }
+    100% {
+        opacity: 1;
+        letter-spacing: 3px;
+        z-index: 100;
+    }
+}
+
+/* Adjust position of object for translation */
+@keyframes translationUp {
+    0% {
+        transform: translate(0px, 40px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes translationDown {
+    0% {
+        transform: translate(0px, -40px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+/*Transitions*/
+@keyframes bg1 {
+    0% {
+        transform: rotate(0deg) translate(0px, 0px);
+    }
+    50% {
+        transform: rotate(135deg) translate(0px, 0px);
+    }
+    100% {
+        transform: rotate(135deg) translate(110px, 110px);
+    }
+}
+
+@keyframes bg2 {
+    0% {
+        transform: rotate(0deg) translate(0px, 0px);
+    }
+    50% {
+        transform: rotate(135deg) translate(0px, 0px);
+    }
+    100% {
+        transform: rotate(135deg) translate(0px, 0px);
+    }
+}
+
+@keyframes bg3 {
+    0% {
+        transform: rotate(0deg) translate(0px, 0px);
+    }
+    50% {
+        transform: rotate(135deg) translate(0px, 0px);
+    }
+    100% {
+        transform: rotate(135deg) translate(-110px, -110px);
+    }
+}
+
+@keyframes bg4 {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        transform: rotate(135deg) scale(1);
+    }
+    100% {
+        transform: rotate(135deg) scale(0.8);
+    }
+}
+
+@keyframes bg5 {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        transform: rotate(135deg) scale(1);
+    }
+    100% {
+        transform: rotate(135deg) scale(1.2);
+    }
+}
+
+.bg1, .bg2, .bg3, .bg4, .bg5 {
+    background-image: url("https://cdn.glitch.global/840246b7-0dc1-4e65-87fe-7a82faedb142/gold.png?v=1738730932521");
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    background-size: 200px;
+    top: 55%;
+    left: 50%;
+    margin-left: -100px;
+    translate: 0px -150px;
+}
+
+.bg1 {
+    animation: bg1 3s linear 1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards ;
+}
+
+.bg2 {
+    animation: bg2 3s linear 1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both ;
+}
+
+.bg3 {
+    animation: bg3 3s linear 1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards ;
+}
+
+.bg4 {
+    animation: bg4 3s linear 1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards ;
+}
+
+.bg5 {
+    animation: bg5 3s linear 1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards ;
+}
+
+.front-page {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    border: 3px solid var(--seco-col);
+}
+
+.header-home {
+    font-family: vonique, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 40vh;
+    letter-spacing: 3px;
+    animation: enter-text 5s;
+}
+
+.header-home > .title {
+    font-size: 60px;
+    display: inline-block;
+    animation: translationDown 5s;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.header-home > .subtitle {
+    font-size: 20px;
+    display: inline-block;
+    animation: translationUp 5s;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.3);
+}

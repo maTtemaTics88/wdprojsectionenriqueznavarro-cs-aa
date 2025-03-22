@@ -1,24 +1,24 @@
 {
-  "name": "wdprojsectionenriqueznavarro-cs-aa",
-  "version": "1.0.0",
-  "description": "&nbsp;&nbsp;&nbsp;&nbsp;Welcome to To Alter the World! A comprehensive website dedicated to exploring the world of geometric transformations in math, including translation, rotation, and dilation. Here, you will find concise explanations, visual guides, and our ultimate interactive graphing model, allowing you to be visually familiar with the different transformations and understand how they work in geometry and beyond.",
-  "main": "script.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/maTtemaTics88/wdprojsectionenriqueznavarro-cs-aa.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/maTtemaTics88/wdprojsectionenriqueznavarro-cs-aa/issues"
-  },
-  "homepage": "https://github.com/maTtemaTics88/wdprojsectionenriqueznavarro-cs-aa#readme",
-  "dependencies": {
-    "express": "^4.21.2",
-    "hbs": "^4.2.0"
-  }
+    "name": "wdprojsectionenriqueznavarro-cs-aa",
+    "version": "1.0.0",
+    "description": "&nbsp;&nbsp;&nbsp;&nbsp;Welcome to To Alter the World! A comprehensive website dedicated to exploring the world of geometric transformations in math, including translation, rotation, and dilation. Here, you will find concise explanations, visual guides, and our ultimate interactive graphing model, allowing you to be visually familiar with the different transformations and understand how they work in geometry and beyond.",
+    "main": "script.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/maTtemaTics88/wdprojsectionenriqueznavarro-cs-aa.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/maTtemaTics88/wdprojsectionenriqueznavarro-cs-aa/issues"
+    },
+    "homepage": "https://github.com/maTtemaTics88/wdprojsectionenriqueznavarro-cs-aa#readme",
+    "dependencies": {
+        "express": "^4.21.2",
+        "hbs": "^4.2.0"
+    }
 }
