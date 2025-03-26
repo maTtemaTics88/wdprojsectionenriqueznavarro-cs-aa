@@ -7,24 +7,43 @@ The main reason why we would want to include persistant information in the websi
 In order to implemen this well, it would be beneficial to have all of the pages to be in the handlebars format so that the user's data can be shown on every page. Moreover, there will also be a new user page where the user can view all of this information in one place with options to change information like the user's name or profile picture. Moreover, there should be options to delete the user's account or reset it.
 
 Ex:
+
 Type of data: User account data
+
 purpose: for logging it to the site and enjoy special privileges in the site
+
 structure in JSON format:
+
 account {
+
 &nbsp;&nbsp;&nbsp;&nbsp;username: text-string,
+
 &nbsp;&nbsp;&nbsp;&nbsp;name: text-string,
+
 &nbsp;&nbsp;&nbsp;&nbsp;password: text-string,
+
 &nbsp;&nbsp;&nbsp;&nbsp;profile: text-link-to-the-uploaded-pix,
+
 &nbsp;&nbsp;&nbsp;&nbsp;progress: [
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{topic: string, completed: boolean},
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{topic: string, completed: boolean},
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{topic: string, completed: boolean}
+
 &nbsp;&nbsp;&nbsp;&nbsp;]
+
 &nbsp;&nbsp;&nbsp;&nbsp;scores: [
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{quiz-type: string, percent-score: float},
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;quiz-type: string, percent-score: float},
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{quiz-type: string, percent-score: float}
+
 &nbsp;&nbsp;&nbsp;&nbsp;]
+
 }
 
 ## CRUD:
