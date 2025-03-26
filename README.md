@@ -1,5 +1,39 @@
 # Title: To Alter the World!
 
+## Q4 Project Update Plan
+
+The main reason why we would want to include persistant information in the website is to keep track of user data such as the user's name, grade, scores on tests, and the user's progress in the lessons. This will be done in two main parts of the website. First, after each lesson, there will be a short concept check to check if the user has mastered the lesson. This can be recorded in a checklist which would show which lessons the user has completed and the one that is suggested to be next. Second, there will be a quiz page wherein the user can answer concept checks, play related games, etc. The information from these activities will be stored as well in the server.
+
+In order to implemen this well, it would be beneficial to have all of the pages to be in the handlebars format so that the user's data can be shown on every page. Moreover, there will also be a new user page where the user can view all of this information in one place with options to change information like the user's name or profile picture. Moreover, there should be options to delete the user's account or reset it.
+
+Ex:
+Type of data: User account data
+purpose: for logging it to the site and enjoy special privileges in the site
+structure in JSON format:
+account {
+&nbsp;&nbsp;&nbsp;&nbsp;username: text-string,
+&nbsp;&nbsp;&nbsp;&nbsp;name: text-string,
+&nbsp;&nbsp;&nbsp;&nbsp;password: text-string,
+&nbsp;&nbsp;&nbsp;&nbsp;profile: text-link-to-the-uploaded-pix,
+&nbsp;&nbsp;&nbsp;&nbsp;progress: [
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{topic: string, completed: boolean},
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{topic: string, completed: boolean},
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{topic: string, completed: boolean}
+&nbsp;&nbsp;&nbsp;&nbsp;]
+&nbsp;&nbsp;&nbsp;&nbsp;scores: [
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{quiz-type: string, percent-score: float},
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;quiz-type: string, percent-score: float},
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{quiz-type: string, percent-score: float}
+&nbsp;&nbsp;&nbsp;&nbsp;]
+}
+
+## CRUD:
+
+Create - There will be a button at the center of the navigation bar to create an account to save user information.
+Read - The data will be read mainly on the account page where all data will be shown.
+Update - The data will be updated after every quiz, test, and lesson completion. The user can also change personal info.
+Delete - There will be an option for the user to delete their account on the account page.
+
 ## Description
 
 &nbsp;&nbsp;&nbsp;&nbsp;Welcome to To Alter the World! A comprehensive website dedicated to exploring the world of geometric transformations in math, including translation, rotation, and dilation. Here, you will find concise explanations, visual guides, and our ultimate interactive graphing model, allowing you to be visually familiar with the different transformations and understand how they work in geometry and beyond.
