@@ -1,7 +1,7 @@
 /*Fonts*/
 @font-face {
     font-family: vonique;
-    src: url(https://cdn.glitch.global/840246b7-0dc1-4e65-87fe-7a82faedb142/JetBrainsMono-Regular.ttf?v=1738731352500);
+    src: url('/JetBrainsMono-Regular.ttf');
 }
 
 /*Transitions*/
@@ -166,9 +166,12 @@ li a:hover {
 }
 
 .transition {
-    background-image: url("https://cdn.glitch.global/840246b7-0dc1-4e65-87fe-7a82faedb142/Untitled%20design%20(4).png?v=1738253429316");
-    width: 100px;
-    height: 100px;
+    background-image: url('/abstract_spin_1.png');
+    background-size: 60% 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 80px;
+    height: 80px;
     position: relative;
     top: 50%;
     left: 50%;
