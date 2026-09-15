@@ -32,14 +32,18 @@ function loadGLTF( modelUrl ) {
 let currentGLTF = undefined;
 let scroll = window.scrollY;
 
-const modelUrl = 'https://cdn.glitch.global/eb8bd69b-8c93-4ffa-941c-f88777d66504/untitled.glb?v=1730044971515';
+const modelUrl = 'vaporwave_sunset.glb';
 
-loadGLTF( modelUrl ).then( ( gltf ) => {
-    currentGLTF = gltf;
-    scene.add( gltf.scene );
+if ( modelUrl ) {
+    loadGLTF( modelUrl ).then( ( gltf ) => {
+        currentGLTF = gltf;
+        scene.add( gltf.scene );
 
-    gltf.scene.scale.set( 0.0001, 0.0001, 0.0001 );
-} );
+        gltf.scene.scale.set( 0.0001, 0.0001, 0.0001 );
+    } ).catch( ( error ) => {
+        console.error( 'Unable to load the 3D model:', error );
+    } );
+}
 
 // update
 const clock = new THREE.Clock();

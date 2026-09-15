@@ -2,7 +2,7 @@ const express = require('express');
 const FileSystem = require('fs');
 const hbs = require('hbs');
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // JSON data
 const primary = JSON.parse(FileSystem.readFileSync('./data/primary.json'));
@@ -15,7 +15,7 @@ app.set('views', './views');
 hbs.registerPartials('./views/partials')
 
 // Serve static files from the "public" folder
-app.use(express.static('public'));
+app.use(express.static('./public'));
 
 // Middleware to parse URL-encoded bodies (form data)
 app.use(express.urlencoded({ extended: true }));
